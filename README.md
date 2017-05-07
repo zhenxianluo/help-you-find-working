@@ -2,9 +2,9 @@
 
 爬虫实现的功能：爬取智联招聘及拉勾网的关于Python及上海的招聘信息。
 
-实现语言：Python
-框架：scrapy
-数据库：PostgreSQL
+实现语言：`Python`  
+框架：`scrapy`  
+数据库：`PostgreSQL`
 
 Python、PostgreSQL及scrapy都搭好后执行如下步骤：
 
