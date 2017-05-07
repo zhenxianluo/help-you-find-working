@@ -18,4 +18,5 @@ Python、PostgreSQL及scrapy都搭好后执行如下步骤：
 之后会不上其它的爬虫，让它更全。后期会跟上代码的讲解，写成博文放在自己的博客上。
 
 交流联系：<chinaitlearner@foxmail.com>或<zxl_d@foxmail.com>
-本人博客：(http://howduudu.xyz) 或 (https://zhenxianluo.github.com)
+
+本人博客：http://howduudu.xyz 或 https://zhenxianluo.github.com
