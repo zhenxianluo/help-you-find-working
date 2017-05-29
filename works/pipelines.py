@@ -8,6 +8,7 @@ def exec_pgsql(sql):
     conn = psycopg2.connect(settings.get('PG_URL'))
     cur = conn.cursor()
     try:
+        print sql
         cur.execute(sql)
         conn.commit()#进行提交操作，不提交则此次对数据库的更改无效
     except Exception, e:

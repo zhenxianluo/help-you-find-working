@@ -14,7 +14,7 @@ class LagouSpider(scrapy.Spider):
                 'px': 'default',
                 'city': '上海',
                 'needAddtionalResult': 'false',
-                'kd': 'Python',
+                'kd': 'Python爬虫',
                 'first': 'first',
                 'pn': '1' 
                 }
@@ -29,6 +29,8 @@ class LagouSpider(scrapy.Spider):
         return url + '?' + '&'.join(haha)
 
     def parse(self, response):
+        print '-'*50
+        print response.url
         data = json.loads(response._body)
         max_pages = int(math.ceil(data['content']['positionResult']['totalCount']/float(data['content']['pageSize'])))
         urls = []
@@ -70,6 +72,7 @@ class LagouSpider(scrapy.Spider):
             item['receiveEmail'] = hrconts[posId]['receiveEmail']
             item['realName'] = hrconts[posId]['realName'] #真实姓名
             items.append(scrapy.Request(url='https://www.lagou.com/jobs/'+str(posId)+'.html', meta={'item':item}, callback=self.get_detail))
+        print items
         return items
 
     def get_detail(self, response):
